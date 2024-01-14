@@ -1,0 +1,141 @@
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 60px 0;
+	background: var(--page-bg-gray);
+	transition: all 0.2s ease-in;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.mobile-nav--open {
+	left: 0;
+}
+
+.mobile-nav a {
+	color: var(--text-color, #101010);
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.mobile-nav__list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 60px;
+	font-size: 28px;
+
+	margin-top: 166px;
+
+	& .active {
+		opacity: 0.5;
+	}
+}
+
+.mobile-nav__info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin-top: 164px;
+}
+
+.mobile-nav__info-tel,
+.mobile-nav__info-mail {
+	color: var(--text-color, #101010);
+	text-align: center;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.mobile-nav__info-tel {
+	margin-bottom: 10px;
+}
+
+.mobile-nav__info-mail {
+	margin-bottom: 20px;
+}
+
+.mobile-nav__info-address {
+	width: 221px;
+	color: var(--text-color, #101010);
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 140%; /* 22.4px */
+}
+
+.mobile-nav__submenu {
+	position: fixed;
+	top: 0;
+	right: -100%;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+
+	display: flex;
+	flex-direction: column;
+	padding: 0px 15px;
+	background: var(--page-bg-gray);
+	transition: all 0.2s ease-in;
+
+	margin-top: 100px;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	&--open {
+		right: 0;
+	}
+}
+
+.mobile-nav__submenu-list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	margin-top: 40px;
+}
+
+.mobile-nav__submenu-item {
+	> a {
+		display: block;
+		color: var(--text-color, #101010);
+		font-size: 16px;
+		font-weight: 500;
+	}
+}
+
+.mobile-nav__submenu-title {
+	display: flex;
+	align-items: center;
+
+	color: var(--text-color, #101010);
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: Raleway;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+
+	> svg {
+		margin-right: 10px;
+	}
+}
+
+@include mediaMobile {
+	.mobile-nav__submenu {
+		margin-bottom: 80px;
+	}
+}

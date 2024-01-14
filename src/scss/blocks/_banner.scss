@@ -1,0 +1,107 @@
+.banner {
+	padding-top: 114px;
+}
+
+.banner__inner {
+	position: relative;
+}
+
+.banner__decor-mob {
+	display: none;
+}
+
+.banner__logo {
+	position: absolute;
+	width: 245px;
+	top: 54px;
+	left: 50px;
+}
+
+.banner__coin {
+	position: absolute;
+	top: -34px;
+	left: 382px;
+}
+
+.banner__title {
+	position: absolute;
+	top: 46px;
+	right: 44px;
+	font-variant-numeric: lining-nums proportional-nums;
+	max-width: 519px;
+	color: var(--text-color, #101010);
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 120%; /* 33.6px */
+}
+
+.banner__title-br--mob {
+	display: none;
+}
+
+@include mediaLaptop {
+	.banner__logo {
+		width: clamp(9.563rem, -0.346rem + 20.54vw, 15.313rem); // 153 245
+		top: 50%;
+		transform: translateY(-50%);
+		left: clamp(1.875rem, -0.279rem + 4.46vw, 3.125rem); //30 50
+	}
+
+	.banner__title {
+		top: 50%;
+		right: clamp(1.875rem, 0.367rem + 3.13vw, 2.75rem); // 30 44
+		transform: translateY(-50%);
+		font-size: clamp(1.125rem, 0.048rem + 2.23vw, 1.75rem); // 18 28
+	}
+
+	.banner__coin {
+		left: clamp(14.688rem, -1.145rem + 32.81vw, 23.875rem); // 235 382
+		width: clamp(6.875rem, 1.652rem + 10.83vw, 9.906rem); // 110 158.5
+	}
+}
+
+@include mediaTabletExtra {
+	.banner__inner {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	.banner__decor {
+		display: none;
+	}
+
+	.banner__decor-mob {
+		display: block;
+		width: 100%;
+	}
+
+	.banner__coin {
+		left: clamp(13.75rem, -4.244rem + 76.77vw, 21.188rem); // 220 339
+		width: clamp(6.25rem, 0.202rem + 25.81vw, 8.75rem); // 100 140
+	}
+
+	.banner__logo {
+		top: clamp(1.5rem, -0.163rem + 7.1vw, 2.188rem); // 24 35
+		left: clamp(1.25rem, -1.018rem + 9.68vw, 2.188rem); // 20 35
+		width: clamp(8.125rem, 0.565rem + 32.26vw, 11.25rem); // 130 180
+		transform: none;
+	}
+
+	.banner__title {
+		top: clamp(4.813rem, -3.958rem + 37.42vw, 8.438rem); // 77 135
+		transform: none;
+		right: 0;
+		left: clamp(1.25rem, -1.018rem + 9.68vw, 2.188rem); // 20 35
+		font-size: clamp(1.125rem, 0.671rem + 1.94vw, 1.313rem); // 18 21
+	}
+
+	.banner__title-br--mob {
+		display: block;
+	}
+}
+
+@include mediaMobile {
+	.banner {
+		padding-top: 74px;
+	}
+}

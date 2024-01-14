@@ -1,0 +1,39 @@
+@mixin transitionLink {
+	transition: color var(--trans-dur) var(--trans-tf);
+
+	&:hover {
+		color: var(--accent-color);
+		fill: var(--accent-color);
+		stroke: var(--accent-color);
+	}
+}
+
+@mixin mediaLaptop {
+	@media (max-width: 1220px) {
+		@content;
+	}
+}
+
+@mixin mediaTablet {
+	@media (max-width: 960px) {
+		@content;
+	}
+}
+
+@mixin mediaTabletExtra {
+	@media (max-width: 772px) {
+		@content;
+	}
+}
+
+@mixin mediaMobile {
+	@media (max-width: 499px) {
+		@content;
+	}
+}
+
+@mixin retina-bg($image) {
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		background-image: $image;
+	}
+}

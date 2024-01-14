@@ -1,0 +1,45 @@
+.advantages {
+	padding-top: 100px;
+}
+
+.advantages__inner {
+	display: flex;
+	gap: 50px;
+}
+
+.advantages__title {
+	max-width: 540px;
+}
+
+.advantages__text {
+	max-width: 598px;
+
+	p + p {
+		margin-top: 16px;
+	}
+}
+
+.advantages__p {
+	color: var(--text-color, #101010);
+	font-variant-numeric: lining-nums proportional-nums;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 160%; /* 25.6px */
+}
+
+@include mediaLaptop {
+	.advantages__text {
+		max-width: clamp(26.875rem, 8.781rem + 37.5vw, 37.375rem); // 430 598
+	}
+}
+
+@include mediaTabletExtra {
+	.advantages__inner {
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.advantages__text {
+		max-width: none;
+	}
+}
