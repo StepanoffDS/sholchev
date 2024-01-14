@@ -90,7 +90,7 @@
 	background: var(--page-bg-gray);
 	transition: all 0.2s ease-in;
 
-	margin-top: 100px;
+	padding-top: 100px;
 
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -136,6 +136,6 @@
 
 @include mediaMobile {
 	.mobile-nav__submenu {
-		margin-bottom: 80px;
+		padding-top: 80px;
 	}
 }
