@@ -14,3 +14,7 @@ body {
 img {
 	display: block;
 }
+
+details summary::-webkit-details-marker {
+	display: none;
+}
